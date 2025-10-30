@@ -1,4 +1,4 @@
-# Physics Wallah - Minimal Clone (Next.js)
+# Skill Share (Next.js)
 
 A minimal full-stack demo of an online learning platform (frontend + backend) using Next.js + NextAuth.js.
 This project focuses on **Option A (recommended)** — using **unlisted YouTube videos** and storing only YouTube IDs in a local JSON file.
