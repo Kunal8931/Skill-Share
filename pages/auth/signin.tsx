@@ -2,6 +2,7 @@ import Header from '../../components/Header'
 import { getCsrfToken, signIn } from 'next-auth/react'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 export default function SignIn({csrfToken}:{csrfToken:string}){
   const [email,setEmail]=useState('')
@@ -24,6 +25,9 @@ export default function SignIn({csrfToken}:{csrfToken:string}){
           <input className="w-full p-2 border rounded" placeholder="Password" type="password" value={password} onChange={e=>setPassword(e.target.value)} />
           <button className="w-full bg-blue-600 text-white p-2 rounded" type="submit">Sign in</button>
         </form>
+        <p className="text-center mt-4">
+          Don't have an account? <Link href="/auth/signup" className="text-blue-600 hover:underline">Sign up</Link>
+        </p>
       </main>
     </>
   )

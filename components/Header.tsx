@@ -37,10 +37,10 @@ const Header: React.FC = () => {
             Admin
           </Link>
           <Link
-            href="/auth/login"
+            href="/auth/signin"
             className="bg-white text-indigo-600 px-4 py-1.5 rounded-full font-semibold hover:bg-yellow-50 transition-all"
           >
-            Login
+            Sign In
           </Link>
         </nav>
       </div>

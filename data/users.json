@@ -7,6 +7,10 @@
     {
       "email": "kunal kumar",
       "password": "$2a$10$bf9ZXdDVbabXIDLKunrosuJIwMurRK5YRDIGnUazWkkBl7rkc9bci"
+    },
+    {
+      "email": "kunal@gmail.com",
+      "password": "$2a$10$OmW1Up69a/wBmBVsqmyrEeWxCRqNnqPjMtosdrcDOgpbK32OacaO6"
     }
   ]
 }
