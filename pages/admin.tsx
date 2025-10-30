@@ -9,7 +9,7 @@ export default function Admin({courses, sessionEmail}:{courses:any[], sessionEma
   const [title,setTitle]=useState('')
   const [desc,setDesc]=useState('')
   const [youtubeId,setYoutubeId]=useState('')
-  const isAdmin = sessionEmail === process.env.NEXT_PUBLIC_ADMIN_EMAIL
+  const isAdmin = sessionEmail === "kunalkk14014@gmail.com"
   async function addCourse(e:any){
     e.preventDefault()
     if(!isAdmin) return alert('Not authorized')
@@ -27,7 +27,7 @@ export default function Admin({courses, sessionEmail}:{courses:any[], sessionEma
       <Header/>
       <main className="max-w-4xl mx-auto p-4">
         <h1 className="text-2xl font-bold">Admin</h1>
-        {!isAdmin && <div className="p-3 bg-yellow-100 mt-4">You are not the configured admin. Set NEXT_PUBLIC_ADMIN_EMAIL in .env.local to {process.env.NEXT_PUBLIC_ADMIN_EMAIL || 'admin@example.com'}</div>}
+        {!isAdmin && <div className="p-3 bg-yellow-100 mt-4">You are not the admin.</div>}
         <section className="mt-4">
           <h2 className="font-semibold">Existing courses</h2>
           <ul className="space-y-2 mt-2">
