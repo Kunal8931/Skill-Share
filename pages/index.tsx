@@ -3,7 +3,14 @@ import Header from "../components/Header";
 import CourseCard from "../components/CourseCard";
 import { GetStaticProps } from "next";
 
-type Course = { [key: string]: any };
+interface Course {
+  id: string;
+  title: string;
+  description: string;
+  image?: string;
+  lessons?: any[];
+  lessonCount?: number;
+}
 
 export default function Home({ courses }: { courses: Course[] }) {
   return (
@@ -29,7 +36,7 @@ export default function Home({ courses }: { courses: Course[] }) {
         <h2 className="text-xl font-semibold mb-4">Courses</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {courses.map((c: Course) => (
-            <CourseCard key={c.id ?? c.slug ?? JSON.stringify(c).slice(0, 20)} course={c} />
+            <CourseCard key={c.id ?? JSON.stringify(c).slice(0, 20)} course={c} />
           ))}
         </div>
       </main>
@@ -116,6 +123,12 @@ export const getStaticProps: GetStaticProps = async () => {
     // ignore errors and return empty list (app will show no courses)
     courses = [];
   }
+
+  // Add lessonCount to each course based on lessons array
+  courses = courses.map((course) => ({
+    ...course,
+    lessonCount: course.lessons ? course.lessons.length : 0,
+  }));
 
   return {
     props: {
