@@ -1,0 +1,38 @@
+{
+  "courses": [
+    {
+      "id": "phy101",
+      "title": "Basic Physics \u2014 Mechanics",
+      "description": "Introductory mechanics course with short lessons.",
+      "image": "/images/physics.jpg",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Kinematics - Intro",
+          "youtubeId": "2k_1dQH4mYw",
+          "duration": "27:23"
+        },
+        {
+          "id": "l2",
+          "title": "Newton's Laws",
+          "youtubeId": "sORgN0I5RAY",
+          "duration": "26:51"
+        }
+      ]
+    },
+    {
+      "id": "phy201",
+      "title": "Electricity Basics",
+      "description": "Fundamentals of electric circuits.",
+      "image": "/images/electricity.jpg",
+      "lessons": [
+        {
+          "id": "l3",
+          "title": "Charge and Field",
+          "youtubeId": "4MxhZrcj4s0",
+          "duration": "14:23"
+        }
+      ]
+    }
+  ]
+}
