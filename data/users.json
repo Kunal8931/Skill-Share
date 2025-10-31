@@ -5,12 +5,12 @@
       "password": "$2a$10$M0z6Y1Zq7QGxq6yYg4vK7e0p9GZtQe3I2Kf6mZq8r8z6u1J1lQ9My"
     },
     {
-      "email": "kunal kumar",
-      "password": "$2a$10$bf9ZXdDVbabXIDLKunrosuJIwMurRK5YRDIGnUazWkkBl7rkc9bci"
-    },
-    {
       "email": "kunal@gmail.com",
       "password": "$2a$10$OmW1Up69a/wBmBVsqmyrEeWxCRqNnqPjMtosdrcDOgpbK32OacaO6"
+    },
+    {
+      "email": "shomya@gmail.com",
+      "password": "$2a$10$HUzXW7h3CPWpFZKvur7mhelys4lPBddLvOssQ8LDgzFQCGSFgxkMC"
     }
   ]
 }

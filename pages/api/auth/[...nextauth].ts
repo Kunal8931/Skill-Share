@@ -13,9 +13,9 @@ export default NextAuth({
         const file = path.join(process.cwd(),'data','users.json')
         const raw = fs.readFileSync(file,'utf8')
         const obj = JSON.parse(raw)
-        const user = obj.users.find((u:any)=> u.email === credentials?.email)
+        const user = obj.users.find((u:any)=> u.email === credentials?.email?.trim().toLowerCase())
         if(!user) return null
-        const ok = bcrypt.compareSync(credentials?.password||'', user.password)
+        const ok = bcrypt.compareSync(credentials?.password?.trim()||'', user.password)
         if(!ok) return null
         return { id: user.email, email: user.email }
       }

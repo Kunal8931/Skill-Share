@@ -8,7 +8,17 @@ export default function SignUp(){
   const router = useRouter()
   async function handleSubmit(e:any){
     e.preventDefault()
-    const res = await fetch('/api/signup',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,password})})
+    const trimmedEmail = email.trim()
+    const trimmedPassword = password.trim()
+    if(!trimmedEmail.includes('@')) {
+      alert('Please enter a valid email address')
+      return
+    }
+    if(trimmedPassword.length < 6) {
+      alert('Password must be at least 6 characters long')
+      return
+    }
+    const res = await fetch('/api/signup',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email: trimmedEmail, password: trimmedPassword})})
     const data = await res.json()
     if(data.ok) router.push('/auth/signin')
     else alert(data.message || 'Error')

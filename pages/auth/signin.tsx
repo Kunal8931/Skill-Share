@@ -10,7 +10,9 @@ export default function SignIn({csrfToken}:{csrfToken:string}){
   const router = useRouter()
   async function handleSubmit(e:any){
     e.preventDefault()
-    const res = await signIn('credentials',{redirect:false,email,password})
+    const trimmedEmail = email.trim()
+    const trimmedPassword = password.trim()
+    const res = await signIn('credentials',{redirect:false,email: trimmedEmail,password: trimmedPassword})
     if(res?.ok) router.push('/courses')
     else alert('Invalid credentials')
   }
