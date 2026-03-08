@@ -1,0 +1,69 @@
+# ===============================
+# Node / Next.js / Tailwind project
+# ===============================
+
+# Dependency directories
+node_modules/
+.pnpm-store/
+.yarn/
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# Next.js build output
+.next/
+out/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor folders / settings
+.vscode/
+.idea/
+*.swp
+
+# Testing / coverage
+coverage/
+.nyc_output/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.old
+
+# Build artifacts
+dist/
+build/
+.cache/
+.sass-cache/
+*.tsbuildinfo
+
+# Uploaded or user-generated media (optional)
+public/uploads/
+public/temp/
+
+# TypeScript
+*.tsbuildinfo
+
+# Misc
+# If you use eslint / prettier caches
+.eslintcache
+.prettier-cache
